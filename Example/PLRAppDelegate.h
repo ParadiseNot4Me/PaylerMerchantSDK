@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  PLRAppDelegate.h
 //  PaylerMerchantSDK
 //
 //  Created by Иван Григорьев on 04.05.15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface PLRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

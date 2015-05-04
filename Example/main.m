@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "PLRAppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([PLRAppDelegate class]));
     }
 }

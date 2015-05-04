@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PLRViewController.h
 //  PaylerMerchantSDK
 //
 //  Created by Иван Григорьев on 04.05.15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface PLRViewController : UIViewController
 
 
 @end

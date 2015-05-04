@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8EED09C1AF7DDF100BB16DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED09B1AF7DDF100BB16DF /* main.m */; };
-		C8EED09F1AF7DDF100BB16DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED09E1AF7DDF100BB16DF /* AppDelegate.m */; };
-		C8EED0A21AF7DDF100BB16DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0A11AF7DDF100BB16DF /* ViewController.m */; };
-		C8EED0A51AF7DDF100BB16DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0A31AF7DDF100BB16DF /* Main.storyboard */; };
-		C8EED0A71AF7DDF100BB16DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0A61AF7DDF100BB16DF /* Images.xcassets */; };
-		C8EED0AA1AF7DDF100BB16DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0A81AF7DDF100BB16DF /* LaunchScreen.xib */; };
 		C8EED0B61AF7DDF100BB16DF /* PaylerMerchantSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0B51AF7DDF100BB16DF /* PaylerMerchantSDKTests.m */; };
+		C8EED0C11AF7E75D00BB16DF /* PLRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C01AF7E75D00BB16DF /* PLRAppDelegate.m */; };
+		C8EED0C41AF7E76F00BB16DF /* PLRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */; };
+		C8EED0C51AF7E76F00BB16DF /* PLRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */; };
+		C8EED0CA1AF7E84E00BB16DF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0C71AF7E84E00BB16DF /* Info.plist */; };
+		C8EED0CB1AF7E84E00BB16DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C81AF7E84E00BB16DF /* main.m */; };
+		C8EED0CC1AF7E84E00BB16DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C81AF7E84E00BB16DF /* main.m */; };
+		C8EED0D11AF7E88600BB16DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0CE1AF7E88600BB16DF /* Images.xcassets */; };
+		C8EED0D21AF7E88600BB16DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0CE1AF7E88600BB16DF /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C8EED0961AF7DDF100BB16DF /* PaylerMerchantSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaylerMerchantSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8EED09A1AF7DDF100BB16DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8EED09B1AF7DDF100BB16DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C8EED09D1AF7DDF100BB16DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C8EED09E1AF7DDF100BB16DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C8EED0A01AF7DDF100BB16DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C8EED0A11AF7DDF100BB16DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C8EED0961AF7DDF100BB16DF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EED0A41AF7DDF100BB16DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C8EED0A61AF7DDF100BB16DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8EED0A91AF7DDF100BB16DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C8EED0AF1AF7DDF100BB16DF /* PaylerMerchantSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylerMerchantSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EED0B41AF7DDF100BB16DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8EED0B51AF7DDF100BB16DF /* PaylerMerchantSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaylerMerchantSDKTests.m; sourceTree = "<group>"; };
+		C8EED0BF1AF7E75D00BB16DF /* PLRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLRAppDelegate.h; path = Example/PLRAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		C8EED0C01AF7E75D00BB16DF /* PLRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLRAppDelegate.m; path = Example/PLRAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		C8EED0C21AF7E76F00BB16DF /* PLRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLRViewController.h; path = Example/PLRViewController.h; sourceTree = SOURCE_ROOT; };
+		C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLRViewController.m; path = Example/PLRViewController.m; sourceTree = SOURCE_ROOT; };
+		C8EED0C71AF7E84E00BB16DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
+		C8EED0C81AF7E84E00BB16DF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = SOURCE_ROOT; };
+		C8EED0CE1AF7E88600BB16DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Example/Images.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,8 @@
 		C8EED08D1AF7DDF100BB16DF = {
 			isa = PBXGroup;
 			children = (
-				C8EED0981AF7DDF100BB16DF /* PaylerMerchantSDK */,
+				C8EED0C61AF7E77A00BB16DF /* PaylerMerchantSDK */,
+				C8EED0981AF7DDF100BB16DF /* Example */,
 				C8EED0B21AF7DDF100BB16DF /* PaylerMerchantSDKTests */,
 				C8EED0971AF7DDF100BB16DF /* Products */,
 			);
@@ -72,32 +75,33 @@
 		C8EED0971AF7DDF100BB16DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8EED0961AF7DDF100BB16DF /* PaylerMerchantSDK.app */,
+				C8EED0961AF7DDF100BB16DF /* Example.app */,
 				C8EED0AF1AF7DDF100BB16DF /* PaylerMerchantSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C8EED0981AF7DDF100BB16DF /* PaylerMerchantSDK */ = {
+		C8EED0981AF7DDF100BB16DF /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				C8EED09D1AF7DDF100BB16DF /* AppDelegate.h */,
-				C8EED09E1AF7DDF100BB16DF /* AppDelegate.m */,
-				C8EED0A01AF7DDF100BB16DF /* ViewController.h */,
-				C8EED0A11AF7DDF100BB16DF /* ViewController.m */,
-				C8EED0A31AF7DDF100BB16DF /* Main.storyboard */,
-				C8EED0A61AF7DDF100BB16DF /* Images.xcassets */,
-				C8EED0A81AF7DDF100BB16DF /* LaunchScreen.xib */,
+				C8EED0BF1AF7E75D00BB16DF /* PLRAppDelegate.h */,
+				C8EED0C01AF7E75D00BB16DF /* PLRAppDelegate.m */,
+				C8EED0C21AF7E76F00BB16DF /* PLRViewController.h */,
+				C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */,
 				C8EED0991AF7DDF100BB16DF /* Supporting Files */,
 			);
+			name = Example;
 			path = PaylerMerchantSDK;
 			sourceTree = "<group>";
 		};
 		C8EED0991AF7DDF100BB16DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C8EED09A1AF7DDF100BB16DF /* Info.plist */,
-				C8EED09B1AF7DDF100BB16DF /* main.m */,
+				C8EED0CE1AF7E88600BB16DF /* Images.xcassets */,
+				C8EED0A81AF7DDF100BB16DF /* LaunchScreen.xib */,
+				C8EED0A31AF7DDF100BB16DF /* Main.storyboard */,
+				C8EED0C71AF7E84E00BB16DF /* Info.plist */,
+				C8EED0C81AF7E84E00BB16DF /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,12 +123,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C8EED0C61AF7E77A00BB16DF /* PaylerMerchantSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PaylerMerchantSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C8EED0951AF7DDF100BB16DF /* PaylerMerchantSDK */ = {
+		C8EED0951AF7DDF100BB16DF /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8EED0B91AF7DDF100BB16DF /* Build configuration list for PBXNativeTarget "PaylerMerchantSDK" */;
+			buildConfigurationList = C8EED0B91AF7DDF100BB16DF /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				C8EED0921AF7DDF100BB16DF /* Sources */,
 				C8EED0931AF7DDF100BB16DF /* Frameworks */,
@@ -134,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = PaylerMerchantSDK;
+			name = Example;
 			productName = PaylerMerchantSDK;
-			productReference = C8EED0961AF7DDF100BB16DF /* PaylerMerchantSDK.app */;
+			productReference = C8EED0961AF7DDF100BB16DF /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C8EED0AE1AF7DDF100BB16DF /* PaylerMerchantSDKTests */ = {
@@ -168,6 +179,7 @@
 				TargetAttributes = {
 					C8EED0951AF7DDF100BB16DF = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 69GYXKL3AK;
 					};
 					C8EED0AE1AF7DDF100BB16DF = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -188,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8EED0951AF7DDF100BB16DF /* PaylerMerchantSDK */,
+				C8EED0951AF7DDF100BB16DF /* Example */,
 				C8EED0AE1AF7DDF100BB16DF /* PaylerMerchantSDKTests */,
 			);
 		};
@@ -199,9 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EED0A51AF7DDF100BB16DF /* Main.storyboard in Resources */,
-				C8EED0AA1AF7DDF100BB16DF /* LaunchScreen.xib in Resources */,
-				C8EED0A71AF7DDF100BB16DF /* Images.xcassets in Resources */,
+				C8EED0D11AF7E88600BB16DF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EED0D21AF7E88600BB16DF /* Images.xcassets in Resources */,
+				C8EED0CA1AF7E84E00BB16DF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EED0A21AF7DDF100BB16DF /* ViewController.m in Sources */,
-				C8EED09F1AF7DDF100BB16DF /* AppDelegate.m in Sources */,
-				C8EED09C1AF7DDF100BB16DF /* main.m in Sources */,
+				C8EED0C11AF7E75D00BB16DF /* PLRAppDelegate.m in Sources */,
+				C8EED0CB1AF7E84E00BB16DF /* main.m in Sources */,
+				C8EED0C41AF7E76F00BB16DF /* PLRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8EED0B61AF7DDF100BB16DF /* PaylerMerchantSDKTests.m in Sources */,
+				C8EED0CC1AF7E84E00BB16DF /* main.m in Sources */,
+				C8EED0C51AF7E76F00BB16DF /* PLRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +252,7 @@
 /* Begin PBXTargetDependency section */
 		C8EED0B11AF7DDF100BB16DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C8EED0951AF7DDF100BB16DF /* PaylerMerchantSDK */;
+			target = C8EED0951AF7DDF100BB16DF /* Example */;
 			targetProxy = C8EED0B01AF7DDF100BB16DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -250,6 +264,7 @@
 				C8EED0A41AF7DDF100BB16DF /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../Example;
 			sourceTree = "<group>";
 		};
 		C8EED0A81AF7DDF100BB16DF /* LaunchScreen.xib */ = {
@@ -258,6 +273,7 @@
 				C8EED0A91AF7DDF100BB16DF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ../Example;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,7 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = PaylerMerchantSDK/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +375,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = PaylerMerchantSDK/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -378,7 +398,7 @@
 				INFOPLIST_FILE = PaylerMerchantSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaylerMerchantSDK.app/PaylerMerchantSDK";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Debug;
 		};
@@ -393,7 +413,7 @@
 				INFOPLIST_FILE = PaylerMerchantSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaylerMerchantSDK.app/PaylerMerchantSDK";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Release;
 		};
@@ -409,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8EED0B91AF7DDF100BB16DF /* Build configuration list for PBXNativeTarget "PaylerMerchantSDK" */ = {
+		C8EED0B91AF7DDF100BB16DF /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C8EED0BA1AF7DDF100BB16DF /* Debug */,
