@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9619B15A-362B-4898-AD63-B44FDB4DC52F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PaylerMerchantSDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>274590480531E06434B739A6299DB50F2931D4D0</key>
+		<string>144.76.243.116:mobile/payler-merchant-ui-for-ios.git</string>
+		<key>D060D3294F03B4F53E9E7EDC448313C7C51DC82B</key>
+		<string>https://github.com/ParadiseNot4Me/PaylerMerchantSDK.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PaylerMerchantSDK.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>274590480531E06434B739A6299DB50F2931D4D0</key>
+		<string>../../../../payler/payler-merchant-ui-for-ios</string>
+		<key>D060D3294F03B4F53E9E7EDC448313C7C51DC82B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ParadiseNot4Me/PaylerMerchantSDK.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D060D3294F03B4F53E9E7EDC448313C7C51DC82B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>274590480531E06434B739A6299DB50F2931D4D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>payler-merchant-ui-for-ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D060D3294F03B4F53E9E7EDC448313C7C51DC82B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PaylerMerchantSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

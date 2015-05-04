@@ -19,6 +19,7 @@
 		C8EED0D21AF7E88600BB16DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0CE1AF7E88600BB16DF /* Images.xcassets */; };
 		C8EED0D31AF7EA8500BB16DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0A31AF7DDF100BB16DF /* Main.storyboard */; };
 		C8EED0D41AF7EA9100BB16DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0A81AF7DDF100BB16DF /* LaunchScreen.xib */; };
+		C8EED0D71AF7F3E200BB16DF /* PLRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0D61AF7F3E200BB16DF /* PLRTableViewController.m */; };
 		EDC1A681B5DB46B3F0322DF4 /* libPods-PaylerMerchantSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A67E1DAD095274B8D12E1E /* libPods-PaylerMerchantSDKTests.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		C8EED0C71AF7E84E00BB16DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
 		C8EED0C81AF7E84E00BB16DF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = SOURCE_ROOT; };
 		C8EED0CE1AF7E88600BB16DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Example/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		C8EED0D51AF7F3E200BB16DF /* PLRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLRTableViewController.h; sourceTree = "<group>"; };
+		C8EED0D61AF7F3E200BB16DF /* PLRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLRTableViewController.m; sourceTree = "<group>"; };
 		D1A67E1DAD095274B8D12E1E /* libPods-PaylerMerchantSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaylerMerchantSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCFFB90EAB8EF919B724953 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +123,8 @@
 			children = (
 				C8EED0BF1AF7E75D00BB16DF /* PLRAppDelegate.h */,
 				C8EED0C01AF7E75D00BB16DF /* PLRAppDelegate.m */,
+				C8EED0D51AF7F3E200BB16DF /* PLRTableViewController.h */,
+				C8EED0D61AF7F3E200BB16DF /* PLRTableViewController.m */,
 				C8EED0C21AF7E76F00BB16DF /* PLRViewController.h */,
 				C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */,
 				C8EED0991AF7DDF100BB16DF /* Supporting Files */,
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EED0D71AF7F3E200BB16DF /* PLRTableViewController.m in Sources */,
 				C8EED0C11AF7E75D00BB16DF /* PLRAppDelegate.m in Sources */,
 				C8EED0CB1AF7E84E00BB16DF /* main.m in Sources */,
 				C8EED0C41AF7E76F00BB16DF /* PLRViewController.m in Sources */,
