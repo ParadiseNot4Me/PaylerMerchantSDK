@@ -1,0 +1,11 @@
+platform :ios, "7.0"
+
+#Common
+pod 'AFNetworking', '~>2.3'
+pod 'SVProgressHUD'
+# Tests
+target :PaylerMerchantSDKTests, :exclusive => true do
+    pod 'OCMock', '~>3.0'
+    pod 'OHHTTPStubs', '~>3.0'
+    pod 'Expecta', '~>0.3'
+end
