@@ -145,6 +145,10 @@
                                             <outlet property="delegate" destination="vXZ-lx-hvc" id="51S-Ye-aBB"/>
                                         </connections>
                                     </textField>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-QV-dut" customClass="PLRWebView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </webView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="1E9-iv-QWV" secondAttribute="centerX" id="44n-6q-cIp"/>
@@ -195,6 +199,7 @@
                         <outlet property="cardNumberTextField" destination="Yy7-Kx-0BQ" id="uxZ-9a-Z7u"/>
                         <outlet property="orderAmountTextField" destination="sZa-BR-gtj" id="07O-7D-rSv"/>
                         <outlet property="scrollView" destination="xdP-Bm-Ssx" id="Kbo-uA-qa9"/>
+                        <outlet property="webView" destination="mmR-QV-dut" id="U9b-Yu-uLm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

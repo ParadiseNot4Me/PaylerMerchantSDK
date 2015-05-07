@@ -8,6 +8,7 @@
 
 #import "PLRViewController.h"
 #import "SVProgressHUD.h"
+#import "PLRWebView.h"
 
 @interface PLRViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cardCVVTextField;
 @property (weak, nonatomic) IBOutlet UITextField *orderAmountTextField;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet PLRWebView *webView;
 
 @end
 
@@ -23,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView.hidden = YES;
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 

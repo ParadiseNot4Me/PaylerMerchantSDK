@@ -28,6 +28,7 @@
 		C8EED0F41AFB76EE00BB16DF /* PaylerMerchantApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0F21AFB76EE00BB16DF /* PaylerMerchantApiClient.m */; };
 		C8EED0F71AFB773E00BB16DF /* PLRError.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0F61AFB773E00BB16DF /* PLRError.m */; };
 		C8EED0F81AFB773E00BB16DF /* PLRError.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0F61AFB773E00BB16DF /* PLRError.m */; };
+		C8EED0FB1AFB77E600BB16DF /* PLRWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0FA1AFB77E600BB16DF /* PLRWebView.m */; };
 		EDC1A681B5DB46B3F0322DF4 /* libPods-PaylerMerchantSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A67E1DAD095274B8D12E1E /* libPods-PaylerMerchantSDKTests.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		C8EED0F21AFB76EE00BB16DF /* PaylerMerchantApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaylerMerchantApiClient.m; path = PaylerMerchantSDK/PaylerMerchantApiClient.m; sourceTree = "<group>"; };
 		C8EED0F51AFB773E00BB16DF /* PLRError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLRError.h; path = PaylerMerchantSDK/PLRError.h; sourceTree = "<group>"; };
 		C8EED0F61AFB773E00BB16DF /* PLRError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLRError.m; path = PaylerMerchantSDK/PLRError.m; sourceTree = "<group>"; };
+		C8EED0F91AFB77E600BB16DF /* PLRWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLRWebView.h; path = PaylerMerchantSDK/PLRWebView.h; sourceTree = "<group>"; };
+		C8EED0FA1AFB77E600BB16DF /* PLRWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLRWebView.m; path = PaylerMerchantSDK/PLRWebView.m; sourceTree = "<group>"; };
 		D1A67E1DAD095274B8D12E1E /* libPods-PaylerMerchantSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaylerMerchantSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCFFB90EAB8EF919B724953 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +192,8 @@
 				C8EED0E91AFB762D00BB16DF /* PLRPayment.m */,
 				C8EED0F51AFB773E00BB16DF /* PLRError.h */,
 				C8EED0F61AFB773E00BB16DF /* PLRError.m */,
+				C8EED0F91AFB77E600BB16DF /* PLRWebView.h */,
+				C8EED0FA1AFB77E600BB16DF /* PLRWebView.m */,
 			);
 			name = PaylerMerchantSDK;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				C8EED0F71AFB773E00BB16DF /* PLRError.m in Sources */,
 				C8EED0C41AF7E76F00BB16DF /* PLRViewController.m in Sources */,
 				C8EED0EC1AFB762D00BB16DF /* PLRPayment.m in Sources */,
+				C8EED0FB1AFB77E600BB16DF /* PLRWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
