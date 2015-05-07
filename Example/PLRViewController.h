@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLRViewController : UIViewController
+@interface PLRViewController : UIViewController <UITextFieldDelegate>
 
 
 @end
