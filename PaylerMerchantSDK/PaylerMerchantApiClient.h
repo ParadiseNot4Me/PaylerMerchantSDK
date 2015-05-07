@@ -38,8 +38,6 @@ typedef void (^PLRPaymentTemplateBlock)(id object, NSError *error);
  */
 @interface PaylerMerchantAPIClient (Payments)
 
-
-
 - (void)payPayment:(PLRPayment *)payment withCardInfo:(PLRCardInfo *)cardInfo completion:(PLRCompletionBlock)completion;
 - (void)payPayment:(PLRPayment *)payment withCardInfo:(PLRCardInfo *)cardInfo createRecurrentTemplate:(BOOL)recurrent completion:(PLRCompletionBlock)completion;
 - (void)pay3DSPayment:(PLRPayment *)payment completion:(PLRCompletionBlock)completion;
@@ -80,6 +78,33 @@ typedef void (^PLRPaymentTemplateBlock)(id object, NSError *error);
  */
 - (void)fetchStatusForPaymentWithId:(NSString *)paymentId completion:(PLRCompletionBlock)completion;
 
+@end
 
+@interface PaylerMerchantAPIClient (RecurrentPayments)
+
+/**
+ *  Запрос осуществления повторного платежа в рамках серии рекуррентных платежей.
+ *
+ *  @param payment    Объект класса PLRPayment. Сам объект и его свойство recurrentTemplate не должны быть nil.
+ *  @param completion Блок выполняется после завершения запроса.
+ */
+- (void)repeatPayment:(PLRPayment *)payment completion:(PLRCompletionBlock)completion;
+
+/**
+ *  Запрос получения информации о шаблоне рекуррентных платежей.
+ *
+ *  @param recurrentTemplateId Идентификатор шаблона рекуррентных платежей.
+ *  @param completion          Блок выполняется после завершения запроса. Если recurrentTemplateId == nil, то в параметре object блока придет массив всех зарегистрированных на Продавца шаблонов, иначе объект PLRPaymentTemplate.
+ */
+- (void)fetchTemplateWithId:(NSString *)recurrentTemplateId completion:(PLRPaymentTemplateBlock)completion;
+
+/**
+ *  Запрос активации/деактивации шаблона рекуррентных платежей.
+ *
+ *  @param recurrentTemplateId Идентификатор шаблона рекуррентных платежей. Не должен быть nil.
+ *  @param active              Показывает, требуется ли активировать или деактивировать шаблон рекуррентных платежей.
+ *  @param completion          Блок выполняется после завершения запроса. В параметре object - объект класса PLRPaymentTemplate.
+ */
+- (void)activateTemplateWithId:(NSString *)recurrentTemplateId active:(BOOL)active completion:(PLRPaymentTemplateBlock)completion;
 
 @end

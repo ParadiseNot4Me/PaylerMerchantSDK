@@ -196,6 +196,88 @@ static NSString *const kRecurrentTemplateKey = @"recurrent_template_id";
 
 @end
 
+@implementation PaylerMerchantAPIClient (RecurrentPayments)
+
+- (void)repeatPayment:(PLRPayment *)payment completion:(PLRCompletionBlock)completion {
+    NSParameterAssert(payment);
+    NSParameterAssert(payment.recurrentTemplateId);
+    
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:[self parametersWithPayment:payment includeAmount:YES]];
+    parameters[kRecurrentTemplateKey] = payment.recurrentTemplateId;
+    [self enqueuePaymentRequest:[self requestWithPath:@"RepeatPay" parameters:[parameters copy]] completion:completion];
+}
+
+- (void)fetchTemplateWithId:(NSString *)recurrentTemplateId completion:(PLRPaymentTemplateBlock)completion {
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:@{@"key": self.merchantKey}];
+    if (recurrentTemplateId) {
+        parameters[kRecurrentTemplateKey] = recurrentTemplateId;
+    }
+    
+    [self enqueuePaymentTemplateRequest:[self requestWithPath:@"GetTemplate" parameters:[parameters copy]] completion:completion];
+}
+
+- (void)activateTemplateWithId:(NSString *)recurrentTemplateId active:(BOOL)active completion:(PLRPaymentTemplateBlock)completion {
+    NSParameterAssert(recurrentTemplateId);
+    
+    NSDictionary *parameters = @{@"key": self.merchantKey, kRecurrentTemplateKey: recurrentTemplateId, @"active": active ? @"true": @"false"};
+    [self enqueuePaymentTemplateRequest:[self requestWithPath:@"ActivateTemplate" parameters:parameters] completion:completion];
+}
+
+- (void)enqueuePaymentTemplateRequest:(NSURLRequest *)request
+                           completion:(PLRPaymentTemplateBlock)completion {
+    AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (completion) {
+            NSArray *responseArray = responseObject[@"templates"];
+            if (responseArray) {
+                NSMutableArray *templates = [[NSMutableArray alloc] init];
+                for (NSDictionary *templateDict in responseArray) {
+                    PLRPaymentTemplate *template = [self.class paymentTemplateFromJSON:templateDict];
+                    if (template) {
+                        [templates addObject:template];
+                    }
+                }
+                completion([templates copy], nil);
+                return;
+            } else if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                PLRPaymentTemplate *template = [self.class paymentTemplateFromJSON:responseObject];
+                if (template) {
+                    completion(template, nil);
+                }
+                return;
+            }
+            
+            completion(nil, [self.class invalidParametersError]);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (completion) {
+            completion(nil, [self.class errorFromRequestOperation:operation]);
+        }
+    }];
+    
+    [self.operationQueue addOperation:operation];
+}
+
++ (PLRPaymentTemplate *)paymentTemplateFromJSON:(NSDictionary *)JSONTemplate {
+    if (!JSONTemplate[kRecurrentTemplateKey]) {
+        return nil;
+    }
+    
+    PLRPaymentTemplate *template = [[PLRPaymentTemplate alloc] initWithTemplateId:JSONTemplate[kRecurrentTemplateKey]];
+    template.cardHolder = JSONTemplate[@"card_holder"];
+    template.cardNumber = JSONTemplate[@"card_number"];
+    template.expiry = JSONTemplate[@"expiry"];
+    template.active = [JSONTemplate[@"active"] boolValue];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    template.creationDate = [dateFormatter dateFromString:JSONTemplate[@"created"]];
+    
+    return template;
+}
+
+@end
+
+
 
 
 

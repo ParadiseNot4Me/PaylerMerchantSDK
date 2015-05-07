@@ -77,4 +77,46 @@ typedef NS_ENUM(NSUInteger, PLRPaymentStatus) {
 
 @end
 
+/**
+ *  В классе инкапсулирована информация о шаблоне рекуррентного платежа.
+ */
+@interface PLRPaymentTemplate : NSObject
+
+/**
+ *  Идентификатор шаблона рекуррентного платежа.
+ */
+@property (nonatomic, readonly, copy) NSString *recurrentTemplateId;
+
+/**
+ *  Дата и время регистрации шаблона рекуррентных платежей в системе Payler.
+ */
+@property (nonatomic, copy) NSDate *creationDate;
+
+/**
+ *  Имя держателя карты, к которой привязан шаблон.
+ */
+@property (nonatomic, copy) NSString *cardHolder;
+
+/**
+ *  Маскированный номер карты, к которой привязан шаблон.
+ */
+@property (nonatomic, copy) NSString *cardNumber;
+
+/**
+ *  Срок действия шаблона рекуррентных платежей формата "MM/yy".
+ */
+@property (nonatomic, copy) NSString *expiry;
+
+/**
+ *  Показывает, активен ли шаблон.
+ */
+@property (nonatomic, getter=isActive) BOOL active;
+
+// Инициализирует и возвращает объект класса PLRPaymentTemplate. recurrentTemplateId не должен быть nil.
+- (instancetype)initWithTemplateId:(NSString *)recurrentTemplateId;
+
+- (id)init __attribute__((unavailable("Must use initWithTemplateId: instead.")));
++ (id)new __attribute__((unavailable("Must use initWithTemplateId: instead.")));
+
+@end
 

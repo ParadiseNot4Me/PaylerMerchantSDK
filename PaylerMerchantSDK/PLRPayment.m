@@ -69,3 +69,21 @@ NSDictionary *PLRPaymentStatusMappingDictionary() {
 }
 
 @end
+
+@interface PLRPaymentTemplate ()
+@property (nonatomic, readwrite, copy) NSString *recurrentTemplateId;
+@end
+
+@implementation PLRPaymentTemplate
+
+- (instancetype)initWithTemplateId:(NSString *)recurrentTemplateId {
+    self = [super init];
+    if (self) {
+        if (!recurrentTemplateId) [NSException raise:NSInvalidArgumentException format:@"'recurrentTemplateId' is required."];
+        
+        _recurrentTemplateId = [recurrentTemplateId copy];
+    }
+    return self;
+}
+
+@end
