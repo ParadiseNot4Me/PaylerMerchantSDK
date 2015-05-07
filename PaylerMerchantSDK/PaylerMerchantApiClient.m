@@ -183,7 +183,7 @@ static NSString *const kRecurrentTemplateKey = @"recurrent_template_id";
         payment.recurrentTemplateId = JSONPayment[kRecurrentTemplateKey];
     }
     
-    payment.authType = JSONPayment[@"auth_type"];
+    payment.authType = [JSONPayment[@"auth_type"] boolValue];
     
     if ([JSONPayment[@"auth_type"] intValue]) {
         payment.acs_url = JSONPayment[@"acs_url"];

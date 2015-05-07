@@ -11,7 +11,6 @@
 		C8EED0B61AF7DDF100BB16DF /* PaylerMerchantSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0B51AF7DDF100BB16DF /* PaylerMerchantSDKTests.m */; };
 		C8EED0C11AF7E75D00BB16DF /* PLRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C01AF7E75D00BB16DF /* PLRAppDelegate.m */; };
 		C8EED0C41AF7E76F00BB16DF /* PLRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */; };
-		C8EED0C51AF7E76F00BB16DF /* PLRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C31AF7E76F00BB16DF /* PLRViewController.m */; };
 		C8EED0CA1AF7E84E00BB16DF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8EED0C71AF7E84E00BB16DF /* Info.plist */; };
 		C8EED0CB1AF7E84E00BB16DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C81AF7E84E00BB16DF /* main.m */; };
 		C8EED0CC1AF7E84E00BB16DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EED0C81AF7E84E00BB16DF /* main.m */; };
@@ -389,7 +388,6 @@
 				C8EED0F81AFB773E00BB16DF /* PLRError.m in Sources */,
 				C8EED0F41AFB76EE00BB16DF /* PaylerMerchantApiClient.m in Sources */,
 				C8EED0CC1AF7E84E00BB16DF /* main.m in Sources */,
-				C8EED0C51AF7E76F00BB16DF /* PLRViewController.m in Sources */,
 				C8EED0ED1AFB762D00BB16DF /* PLRPayment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

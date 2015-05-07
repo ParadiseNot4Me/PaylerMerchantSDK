@@ -17,9 +17,9 @@ static NSString *const TwoStepSegueIdentifier = @"TwoStepSegue";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     PLRViewController *controller = segue.destinationViewController;
     if ([segue.identifier isEqualToString:OneStepSegueIdentifier]) {
-       
+        controller.payType = PLRPayTypeOneStep;
     } else if ([segue.identifier isEqualToString:TwoStepSegueIdentifier]) {
-      
+        controller.payType = PLRPayTypeTwoStep;
     }
 }
 

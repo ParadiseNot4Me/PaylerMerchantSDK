@@ -105,10 +105,10 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="payButtonPressed:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="MBw-s8-RIn"/>
+                                            <action selector="payButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gUK-U1-KIZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-hN-jS5">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-hN-jS5">
                                         <rect key="frame" x="45" y="391" width="230" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="230" id="xzN-gA-3ty"/>
@@ -121,7 +121,7 @@
                                             <action selector="refundButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AK1-3m-vU5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-PU-rR8">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-PU-rR8">
                                         <rect key="frame" x="45" y="445" width="230" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="230" id="ArL-0z-BZz"/>
@@ -131,7 +131,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="chargeButtonPressed:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="CuV-ne-4n1"/>
+                                            <action selector="chargeButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RI0-iR-hIz"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZa-BR-gtj">
@@ -145,7 +145,7 @@
                                             <outlet property="delegate" destination="vXZ-lx-hvc" id="51S-Ye-aBB"/>
                                         </connections>
                                     </textField>
-                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-QV-dut" customClass="PLRWebView">
+                                    <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-QV-dut" customClass="PLRWebView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </webView>
@@ -197,9 +197,12 @@
                         <outlet property="cardExpirationDateTextField" destination="fA3-KE-vn1" id="xqA-YC-k4S"/>
                         <outlet property="cardHolderTextField" destination="Jbe-J2-Pu3" id="3gC-5t-O77"/>
                         <outlet property="cardNumberTextField" destination="Yy7-Kx-0BQ" id="uxZ-9a-Z7u"/>
+                        <outlet property="chargeButton" destination="7dk-PU-rR8" id="fuI-Vs-DEu"/>
                         <outlet property="orderAmountTextField" destination="sZa-BR-gtj" id="07O-7D-rSv"/>
+                        <outlet property="payButton" destination="8lN-I1-nDA" id="CVO-Pq-wbU"/>
+                        <outlet property="refundButton" destination="8KK-hN-jS5" id="OgZ-sQ-sVY"/>
                         <outlet property="scrollView" destination="xdP-Bm-Ssx" id="Kbo-uA-qa9"/>
-                        <outlet property="webView" destination="mmR-QV-dut" id="U9b-Yu-uLm"/>
+                        <outlet property="webView" destination="mmR-QV-dut" id="VMq-E5-Mpl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -248,7 +251,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="TwoStepSeque" id="ocY-SR-KlB"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="TwoStepSegue" id="ocY-SR-KlB"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

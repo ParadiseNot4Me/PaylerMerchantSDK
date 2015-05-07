@@ -9,6 +9,9 @@
 #import "PLRViewController.h"
 #import "SVProgressHUD.h"
 #import "PLRWebView.h"
+#import "PaylerMerchantApiClient.h"
+#import "PLRCardInfo.h"
+
 
 @interface PLRViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
@@ -18,6 +21,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *orderAmountTextField;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet PLRWebView *webView;
+@property (weak, nonatomic) IBOutlet UIButton *payButton;
+@property (weak, nonatomic) IBOutlet UIButton *refundButton;
+@property (weak, nonatomic) IBOutlet UIButton *chargeButton;
+
+@property (nonatomic, strong) PaylerMerchantAPIClient *client;
+@property (nonatomic, strong) PLRPayment *payment;
 
 @end
 
@@ -25,22 +34,134 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webView.hidden = YES;
+    if (self.payType == PLRPayTypeOneStep) {
+        self.title = @"Одностадийный платеж";
+    } else if (self.payType == PLRPayTypeTwoStep) {
+        self.title = @"Двухстадийный платеж";
+    }
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
-
 
 #pragma mark - Actions
 
 - (IBAction)payButtonPressed:(id)sender {
     
+    NSString *paymentId = [NSString stringWithFormat:@"SDK_iOS_%@", [[NSUUID UUID] UUIDString]];
+    NSArray *orderAmountComponents = [self.orderAmountTextField.text componentsSeparatedByString:@"."];
+    NSUInteger orderAmount = [orderAmountComponents count] == 1 ? orderAmount = [orderAmountComponents[0] intValue]*100 : [orderAmountComponents[0] intValue]*100 + [orderAmountComponents[1] intValue];
+    PLRPayment *payment = [[PLRPayment alloc] initWithId:paymentId amount:orderAmount];
+    NSArray *cardDateComponents = [self.cardExpirationDateTextField.text componentsSeparatedByString:@"/"];
+    NSString *cardNumber = [self.cardNumberTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    PLRCardInfo *cardInfo = [[PLRCardInfo alloc] initWithCardNumber:cardNumber cardHolder:self.cardHolderTextField.text expiredYear:cardDateComponents[1] expiredMonth:cardDateComponents[0] secureCode:self.cardCVVTextField.text];
+    self.payment = payment;
+    #warning Здесь нужно указать ваши параметры.
+    self.client = [PaylerMerchantAPIClient testClientWithMerchantKey:@"TestMerchantBM"];
+    
+    if (self.payType == PLRPayTypeOneStep) {
+        [SVProgressHUD showWithStatus:@"Списание средств"];
+        [self.client payPayment:payment withCardInfo:cardInfo completion:^(PLRPayment *payment, NSError *error) {
+            if (!error) {
+                self.refundButton.hidden = NO;
+                if (payment.authType) {
+                    self.webView.hidden = NO;
+                    [SVProgressHUD showSuccessWithStatus:@"3DS"];
+                    
+                    [self.webView auth3dsForPayment:payment withCompletion:^(PLRPayment *payment, NSError *error) {
+                        self.webView.hidden = YES;
+                        [SVProgressHUD showWithStatus:@"Списание средств"];
+                        [self.client pay3DSPayment:payment completion:^(PLRPayment *payment, NSError *error) {
+                            if (!error) {
+                                [self clearTextField];
+                                [SVProgressHUD showSuccessWithStatus:@"Средства успешно списаны"];
+                                
+                            }
+                        }];
+                    }];
+                } else {
+                    [self clearTextField];
+                    [SVProgressHUD showSuccessWithStatus:@"Средства успешно списаны"];
+                }
+                
+            } else {
+                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@", [[error.userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription]]];
+            }
+        }];
+    } else if (self.payType == PLRPayTypeTwoStep) {
+        [SVProgressHUD showWithStatus:@"Блокировка средств"];
+        [self.client blockPayment:payment withCardInfo:cardInfo completion:^(PLRPayment *payment, NSError *error) {
+            if (!error) {
+                self.refundButton.hidden = NO;
+                self.chargeButton.hidden = NO;
+                if (payment.authType) {
+                    self.webView.hidden = NO;
+                    [SVProgressHUD showSuccessWithStatus:@"3DS"];
+                    
+                    [self.webView auth3dsForPayment:payment withCompletion:^(PLRPayment *payment, NSError *error) {
+                        self.webView.hidden = YES;
+                        [SVProgressHUD showWithStatus:@"Блокировка средств"];
+                        [self.client block3DSPayment:payment completion:^(PLRPayment *payment, NSError *error) {
+                            if (!error) {
+                                [self clearTextField];
+                                [SVProgressHUD showSuccessWithStatus:@"Средства успешно заблокированы"];
+                            }
+                        }];
+                    }];
+                } else {
+                    [self clearTextField];
+                    [SVProgressHUD showSuccessWithStatus:@"Средства успешно заблокированы"];
+                }
+                
+            } else {
+                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@", [[error.userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription]]];
+            }
+
+        }];
+    }
 }
 - (IBAction)refundButtonPressed:(id)sender {
+    
+    if (self.payType == PLRPayTypeOneStep) {
+        [SVProgressHUD showWithStatus:@"Возврат средств"];
+        [self.client refundPayment:self.payment completion:^(PLRPayment *payment, NSError *error) {
+            if (!error) {
+                [SVProgressHUD showSuccessWithStatus:@"Средства успешно возвращены"];
+                [self hideButtons];
+            }
+        }];
+    } else if (self.payType == PLRPayTypeTwoStep) {
+        [SVProgressHUD showWithStatus:@"Разблокирование средств"];
+        [self.client retrievePayment:self.payment completion:^(PLRPayment *payment, NSError *error) {
+            if (!error) {
+                [SVProgressHUD showSuccessWithStatus:@"Средства успешно разблокированы"];
+                [self hideButtons];
+            }
+        }];
+    }
     
 }
 
 - (IBAction)chargeButtonPressed:(id)sender {
-    
+    [SVProgressHUD showWithStatus:@"Списание средств"];
+    [self.client chargePayment:self.payment completion:^(PLRPayment *payment, NSError *error) {
+        if(!error){
+            [SVProgressHUD showSuccessWithStatus:@"Средства успешно списаны"];
+            [self hideButtons];
+        }
+    }];
+}
+
+- (void)clearTextField {
+    self.cardNumberTextField.text = @"";
+    self.cardHolderTextField.text = @"";
+    self.cardCVVTextField.text = @"";
+    self.cardExpirationDateTextField.text = @"";
+    self.orderAmountTextField.text = @"";
+}
+
+- (void) hideButtons {
+    self.chargeButton.hidden = YES;
+    self.payButton.hidden = NO;
+    self.refundButton.hidden = YES;
 }
 
 #pragma mark - UITextFieldDelegate implementation

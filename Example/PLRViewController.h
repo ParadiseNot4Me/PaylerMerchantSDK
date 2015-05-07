@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PLRPayment.h"
 
 @interface PLRViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic, assign) PLRPayType payType;
 
 @end
 
